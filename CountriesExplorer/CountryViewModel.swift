@@ -44,7 +44,6 @@ class CountryViewModel: NSObject {
         table.dataSource = self
     }
 }
-
 extension CountryViewModel: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
