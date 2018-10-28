@@ -27,7 +27,7 @@ class CountryTableViewCell: UITableViewCell {
             capital.text = item.capital
             currencies.text = item.currencies?.joined(separator: ",")
             // TODO: set flag image
-            flagImage.image = UIImage(named: "flag")
+            flagImage.image = UIImage()
         }
     }
     
