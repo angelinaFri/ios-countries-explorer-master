@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nuI-C5-uSb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Countries-->
+        <scene sceneID="s0z-BR-x9b">
+            <objects>
+                <tableViewController id="bU9-Wk-PX8" customClass="CountriesListViewController" customModule="CountriesExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3xI-AR-VOP" userLabel="Countries Table">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Type country name" id="zhC-th-0D9">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <connections>
+                            <outlet property="dataSource" destination="bU9-Wk-PX8" id="BSE-qI-8I6"/>
+                            <outlet property="delegate" destination="bU9-Wk-PX8" id="8u4-SO-bSK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Countries" id="hV7-9z-KPl"/>
+                    <connections>
+                        <segue destination="lTh-0B-2rG" kind="show" identifier="goToCountryDetails" id="d97-jb-hv4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xnt-aY-1us" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863.2" y="131.78410794602701"/>
+        </scene>
+        <!--Country Details-->
+        <scene sceneID="hWc-13-dLy">
+            <objects>
+                <viewController id="lTh-0B-2rG" customClass="CountryDetailsViewController" customModule="CountriesExplorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Xj-Ld-dKU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="i7t-sx-hzv" userLabel="Flag Image">
+                                <rect key="frame" x="16" y="80" width="343" height="234"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="234" id="GG4-0h-HJJ"/>
+                                </constraints>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="GG4-0h-HJJ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nk0-Ls-tuO" userLabel="Country Details Table">
+                                <rect key="frame" x="16" y="322" width="343" height="329"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6eL-py-HzW" firstAttribute="trailing" secondItem="nk0-Ls-tuO" secondAttribute="trailing" constant="16" id="Ctj-Ds-08r"/>
+                            <constraint firstItem="i7t-sx-hzv" firstAttribute="leading" secondItem="6eL-py-HzW" secondAttribute="leading" constant="16" id="EaU-QL-jMP"/>
+                            <constraint firstItem="6eL-py-HzW" firstAttribute="bottom" secondItem="i7t-sx-hzv" secondAttribute="bottom" constant="16" id="HzV-3I-FDR"/>
+                            <constraint firstItem="nk0-Ls-tuO" firstAttribute="width" secondItem="i7t-sx-hzv" secondAttribute="width" multiplier="2" id="KsK-Xo-5FC">
+                                <variation key="heightClass=compact" constant="1"/>
+                            </constraint>
+                            <constraint firstItem="nk0-Ls-tuO" firstAttribute="leading" secondItem="6eL-py-HzW" secondAttribute="leading" constant="16" id="N0w-37-fjz"/>
+                            <constraint firstItem="i7t-sx-hzv" firstAttribute="top" secondItem="6eL-py-HzW" secondAttribute="top" constant="16" id="YTV-oS-MSJ"/>
+                            <constraint firstItem="6eL-py-HzW" firstAttribute="bottom" secondItem="nk0-Ls-tuO" secondAttribute="bottom" constant="16" id="Zsa-Pv-UZb"/>
+                            <constraint firstItem="nk0-Ls-tuO" firstAttribute="top" secondItem="3Xj-Ld-dKU" secondAttribute="topMargin" constant="16" id="lwr-sB-f38"/>
+                            <constraint firstItem="nk0-Ls-tuO" firstAttribute="top" secondItem="i7t-sx-hzv" secondAttribute="bottom" constant="8" id="oUs-4v-647"/>
+                            <constraint firstItem="6eL-py-HzW" firstAttribute="trailing" secondItem="i7t-sx-hzv" secondAttribute="trailing" constant="16" id="r7B-uh-aYw"/>
+                            <constraint firstItem="i7t-sx-hzv" firstAttribute="leading" secondItem="nk0-Ls-tuO" secondAttribute="trailing" constant="10" id="wfe-Qp-aH6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6eL-py-HzW"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HzV-3I-FDR"/>
+                                <exclude reference="wfe-Qp-aH6"/>
+                                <exclude reference="KsK-Xo-5FC"/>
+                                <exclude reference="lwr-sB-f38"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Ctj-Ds-08r"/>
+                                <include reference="HzV-3I-FDR"/>
+                                <exclude reference="EaU-QL-jMP"/>
+                                <include reference="wfe-Qp-aH6"/>
+                                <include reference="KsK-Xo-5FC"/>
+                                <include reference="lwr-sB-f38"/>
+                                <exclude reference="oUs-4v-647"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Country Details" id="n6T-sZ-7Q6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TJ-8L-6sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2823.75" y="131.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P0R-Sc-xdq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nuI-C5-uSb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fuj-Fk-xbx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bU9-Wk-PX8" kind="relationship" relationship="rootViewController" id="EPV-MC-Ml1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GC7-f7-32P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flag" width="24" height="24"/>
+    </resources>
+</document>

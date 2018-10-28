@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="119" id="KGk-i7-Jjw" customClass="CountryTableViewCell" customModule="CountriesExplorer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="383" height="118.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="1ec-Um-gEl" userLabel="Flag Image">
+                        <rect key="frame" x="228" y="13" width="139" height="93"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="93" id="EG2-tn-yNf"/>
+                            <constraint firstAttribute="width" constant="139" id="LlH-w2-MuE"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mns-X3-GIA" userLabel="Details">
+                        <rect key="frame" x="16" y="11" width="202" height="97"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-43-ESF">
+                                <rect key="frame" x="0.0" y="0.0" width="202" height="32.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeD-6M-Sea">
+                                <rect key="frame" x="0.0" y="32.5" width="202" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currencies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2w-AM-O5M">
+                                <rect key="frame" x="0.0" y="64.5" width="202" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aeD-6M-Sea" secondAttribute="trailing" id="BAD-1K-jj8"/>
+                            <constraint firstItem="aeD-6M-Sea" firstAttribute="height" secondItem="Sfh-43-ESF" secondAttribute="height" id="FCe-I9-fhQ"/>
+                            <constraint firstItem="p2w-AM-O5M" firstAttribute="leading" secondItem="Mns-X3-GIA" secondAttribute="leading" id="LD7-wS-Q18"/>
+                            <constraint firstItem="p2w-AM-O5M" firstAttribute="top" secondItem="aeD-6M-Sea" secondAttribute="bottom" id="UEi-XC-xua"/>
+                            <constraint firstAttribute="trailing" secondItem="p2w-AM-O5M" secondAttribute="trailing" id="V7y-DX-1TV"/>
+                            <constraint firstAttribute="bottom" secondItem="p2w-AM-O5M" secondAttribute="bottom" id="g31-wI-2gX"/>
+                            <constraint firstItem="aeD-6M-Sea" firstAttribute="leading" secondItem="Mns-X3-GIA" secondAttribute="leading" id="iRK-s9-eKK"/>
+                            <constraint firstItem="p2w-AM-O5M" firstAttribute="height" secondItem="Sfh-43-ESF" secondAttribute="height" id="lbl-rW-mLY"/>
+                            <constraint firstItem="Sfh-43-ESF" firstAttribute="leading" secondItem="Mns-X3-GIA" secondAttribute="leading" id="p2F-7I-Gk0"/>
+                            <constraint firstItem="aeD-6M-Sea" firstAttribute="top" secondItem="Sfh-43-ESF" secondAttribute="bottom" id="qPy-Ai-6f5"/>
+                            <constraint firstAttribute="trailing" secondItem="Sfh-43-ESF" secondAttribute="trailing" id="ro8-8F-Al7"/>
+                            <constraint firstItem="Sfh-43-ESF" firstAttribute="top" secondItem="Mns-X3-GIA" secondAttribute="top" id="sPi-xA-cmt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1ec-Um-gEl" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="88e-ig-9Ql"/>
+                    <constraint firstItem="Mns-X3-GIA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="98M-8o-ifI"/>
+                    <constraint firstItem="1ec-Um-gEl" firstAttribute="leading" secondItem="Mns-X3-GIA" secondAttribute="trailing" constant="10" id="Mg8-js-03r"/>
+                    <constraint firstItem="Mns-X3-GIA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Nky-AX-Lnx"/>
+                    <constraint firstItem="1ec-Um-gEl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="hn1-0t-u7r"/>
+                    <constraint firstItem="Mns-X3-GIA" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="nK0-Ew-4fF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="1ec-Um-gEl" secondAttribute="bottom" constant="2" id="v4i-19-XP6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="capital" destination="aeD-6M-Sea" id="pyY-Jt-Mo8"/>
+                <outlet property="countryName" destination="Sfh-43-ESF" id="VU5-Sg-afI"/>
+                <outlet property="currencies" destination="p2w-AM-O5M" id="F5l-x3-Gbe"/>
+                <outlet property="flagImage" destination="1ec-Um-gEl" id="Iaa-Xl-XPr"/>
+            </connections>
+            <point key="canvasLocation" x="114.40000000000001" y="111.0944527736132"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="flag" width="24" height="24"/>
+    </resources>
+</document>
